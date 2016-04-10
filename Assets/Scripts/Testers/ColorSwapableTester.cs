@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Uif;
 
 public class ColorSwapableTester : Tester {
 	public ColorSwapable Swapable;

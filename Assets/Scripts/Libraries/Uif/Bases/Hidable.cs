@@ -1,11 +1,30 @@
 ﻿using UnityEngine;
 
-public abstract class Hidable : MonoBehaviour, IHidable {
-	public abstract void Hide ();
+namespace Uif {
+	public abstract class Hidable : MonoBehaviour, IHidable {
+		public EasingType TransitionEasingType = EasingType.Cubic;
+		public float TransitionDuration = 0.5f;
 
-	public abstract void Show ();
+		//public HidableState StartState;
+		public HidableAction StartAction;
 
-	public abstract bool Hided ();
+		void Start () {
+			switch (StartAction) {
+			case HidableAction.Show:
+				Show();
+				break;
+			case HidableAction.Hide:
+				Hide();
+				break;
+			}
+		}
 
-	public abstract bool Shown ();
+		public abstract void Hide ();
+
+		public abstract void Show ();
+
+		public abstract bool Hided ();
+
+		public abstract bool Shown ();
+	}
 }

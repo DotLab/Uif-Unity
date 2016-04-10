@@ -1,21 +1,23 @@
-﻿public interface IHidable {
-	void Hide ();
+﻿namespace Uif {
+	public interface IHidable {
+		void Show ();
 
-	void Show ();
+		void Hide ();
 
-	bool Hided ();
+		bool Shown ();
 
-	bool Shown ();
-}
+		bool Hided ();
+	}
 
-public enum HidableState {
-	None,
-	Hided,
-	Shown
-}
+	public enum HidableState {
+		None,
+		Shown,
+		Hided
+	}
 
-public enum HidableAction {
-	None,
-	Hide,
-	Show
+	public enum HidableAction {
+		None,
+		Show,
+		Hide
+	}
 }

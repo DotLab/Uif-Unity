@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Uif;
 
 public class SpriteSwapableTester : Tester {
 	public SpriteSwapable Swapable;

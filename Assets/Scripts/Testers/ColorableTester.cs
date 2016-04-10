@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using Uif;
 
 public class ColorableTester : Tester {
-	public Colorable Colorable;
+	public Colorable Hidable;
 
 	void OnValidate () {
-		if (Colorable == null) Colorable = GetComponent<Colorable>();
+		if (Hidable == null) Hidable = GetComponent<Colorable>();
 	}
 
 	public override void Test () {
-		Colorable.SetColor(new Color(Random.value, Random.value, Random.value));
+		Hidable.SetColor(new Color(Random.value, Random.value, Random.value));
 	}
 }

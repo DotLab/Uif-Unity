@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public interface IColorable {
-	Color GetColor ();
-	void SetColor (Color newColor);
+namespace Uif {
+	public interface IColorable {
+		Color GetColor ();
+
+		void SetColor (Color newColor);
+	}
 }
